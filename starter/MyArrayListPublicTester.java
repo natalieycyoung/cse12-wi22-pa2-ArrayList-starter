@@ -56,7 +56,7 @@ public class MyArrayListPublicTester {
         listWithNull.append(3);
 
         assertEquals("Check that append increments size", 11, listWithNull.size);
-        assertEquals("Check that capacity is unchanged", 20, listWithNull.data.length);
+        assertEquals("Check that if the capacity is updated", 20, listWithNull.data.length);
         assertEquals("check the correct element", null, listWithNull.data[0]);
         assertEquals("check the correct element", 3, listWithNull.data[10]);
     }
@@ -94,7 +94,7 @@ public class MyArrayListPublicTester {
 
         assertEquals("Check that prepended item", 3, listWithInt.data[0]);
         assertEquals("Check list size after the prepend", 4, listWithInt.size);
-        assertEquals("Check that capacity is unchanged", 6, listWithInt.data.length);
+        assertEquals("Check that if the capacity is updated", 6, listWithInt.data.length);
     }
 
     /*
@@ -107,7 +107,7 @@ public class MyArrayListPublicTester {
 
         assertEquals("should insert 5 to the list", 5, listWithNull.data[0]);
         assertEquals("should increment size", 11, listWithNull.size);
-        assertEquals("capacity of the list should not change when insert one elem", 20, listWithNull.data.length);
+        assertEquals("check that if the capacity is updated", 20, listWithNull.data.length);
 
         assertEquals("should insert 5 to the list", 100, listCustomCapacity.data[0]);
         assertEquals("should increment size", 1, listCustomCapacity.size);
