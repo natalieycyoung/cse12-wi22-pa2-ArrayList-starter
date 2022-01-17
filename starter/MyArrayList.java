@@ -1,8 +1,8 @@
 /**
  * TODO: Add your file header
- * Name:
- * ID:
- * Email:
+ * Name: Natalie Young
+ * ID: A17237090
+ * Email: nyoung@ucsd.edu
  * Sources used: Put "None" if you did not have any external help
  * Some example of sources used would be Tutors, Zybooks, and Lecture Slides
  * 
