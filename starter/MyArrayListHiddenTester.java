@@ -64,7 +64,6 @@ public class MyArrayListHiddenTester {
 		assertEquals("Check that capacity is updated", 6, listCustomCapacity.data.length);
 		assertEquals("Check the correct element", 8, listCustomCapacity.data[0]);
 		assertEquals("Check the correct element", 3, listCustomCapacity.data[3]);
-
 	}
 
 	/**
@@ -74,7 +73,11 @@ public class MyArrayListHiddenTester {
 	 */
 	@Test
 	public void testPrependNull(){
-		list
+		listCustomCapacity.prepend(null);
+
+		assertEquals("Check that prepend increments size", 4, listCustomCapacity.size);
+		assertEquals("Check that capacity is updated", 6, listCustomCapacity.data.length);
+		assertEquals("Check the correct element", null, listCustomCapacity.data[0]);
 	}
 	
 	/**
