@@ -57,8 +57,8 @@ public class MyArrayListPublicTester {
 
 		assertEquals("Check that append increments size", 11, listWithNull.size);
 		assertEquals("Check that if the capacity is updated", 20, listWithNull.data.length);
-		assertEquals("check the correct element", null, listWithNull.data[0]);
-		assertEquals("check the correct element", 3, listWithNull.data[10]);
+		assertEquals("Check the correct element", null, listWithNull.data[0]);
+		assertEquals("Check the correct element", 3, listWithNull.data[10]);
 	}
 
 	/*

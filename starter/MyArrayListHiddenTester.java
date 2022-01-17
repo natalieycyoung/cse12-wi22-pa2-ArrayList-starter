@@ -30,13 +30,13 @@ public class MyArrayListHiddenTester {
 		listWithInt = new MyArrayList<Integer>(arrInts);
 	}
 
-	/**
+	/** TODO
 	 * Aims to test the capacity argument constructor when the input
 	 * is not valid
 	 */
 	@Test
 	public void testConstructorInvalidArg(){
-		assertEquals("Check for invalid input for capacity arg constructor", listCustomCapacity.size + 1, listCustomCapacity.size);
+		assertEquals("Check for invalid input for capacity arg constructor", 4, listCustomCapacity.size);
 	}
 
 	/**
@@ -45,7 +45,8 @@ public class MyArrayListHiddenTester {
 	 */
 	@Test
 	public void testConstructorNullArg(){
-		assertEquals("Test null input for array arg constructor", null, listWithNull);
+		assertEquals("Check size for constructor with null argument", 10, listWithNull.size);
+		assertEquals("Check capacity for constructor with null argument", 10, listWithNull.data.length);
 	}
 
 	/**
@@ -54,7 +55,16 @@ public class MyArrayListHiddenTester {
 	 */
 	@Test
 	public void testAppendAtCapacity(){
-		
+		listCustomCapacity.add(8);
+		listCustomCapacity.add(10);
+		listCustomCapacity.add(4);
+		listCustomCapacity.append(3);
+
+		assertEquals("Check that append increments size", 4, listCustomCapacity.size);
+		assertEquals("Check that capacity is updated", 6, listCustomCapacity.data.length);
+		assertEquals("Check the correct element", 8, listCustomCapacity.data[0]);
+		assertEquals("Check the correct element", 3, listCustomCapacity.data[3]);
+
 	}
 
 	/**
@@ -64,7 +74,7 @@ public class MyArrayListHiddenTester {
 	 */
 	@Test
 	public void testPrependNull(){
-		
+		list
 	}
 	
 	/**
@@ -129,3 +139,4 @@ public class MyArrayListHiddenTester {
 	}
 
 }
+
