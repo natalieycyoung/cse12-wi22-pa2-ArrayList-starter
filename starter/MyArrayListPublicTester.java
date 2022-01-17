@@ -45,7 +45,7 @@ public class MyArrayListPublicTester {
 		assertEquals("Check capacity for the constructor with size argument", 3, listCustomCapacity.data.length);
 
 		assertEquals("Check size for the constructor with list argument", 3, listWithInt.size);
-		assertEquals("Check capacity for the constructor with size argument", 3, listWithInt.data.length);
+		assertEquals("Check capacity for the constructor with list argument", 3, listWithInt.data.length);
 	}
 
 	/*
