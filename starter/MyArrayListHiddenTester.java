@@ -36,7 +36,7 @@ public class MyArrayListHiddenTester {
 	 */
 	@Test
 	public void testConstructorInvalidArg(){
-		
+		assertEquals("Check for invalid input for capacity arg constructor", listCustomCapacity.size + 1, listCustomCapacity.size);
 	}
 
 	/**
@@ -45,7 +45,7 @@ public class MyArrayListHiddenTester {
 	 */
 	@Test
 	public void testConstructorNullArg(){
-		
+		assertEquals("Test null input for array arg constructor", null, listWithNull);
 	}
 
 	/**

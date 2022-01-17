@@ -34,7 +34,7 @@ public class MyArrayListPublicTester {
 	// ======================== Public Tests ========================
 
 	/*
-	 * Tests Constructor when no arguements are given during instantiation
+	 * Tests Constructor when no arguments are given during instantiation
 	 */
 	@Test
 	public void testBasicConstructor() {
