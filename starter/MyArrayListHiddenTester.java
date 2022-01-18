@@ -102,7 +102,7 @@ public class MyArrayListHiddenTester {
 		listWithNull.insert(50, Integer.valueOf(5));
 		listCustomCapacity.insert(12, 100);
 
-		assertEquals("");
+		assertEquals("Check insert out of bound", );
 	}
 
 	/**
