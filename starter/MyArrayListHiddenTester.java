@@ -137,13 +137,18 @@ public class MyArrayListHiddenTester {
 	   
 	}
 
-	/**
+	/** TODO
 	 * Aims to test the expandCapacity method when 
 	 * requiredCapacity is greater than double(2x) the current capacity
 	 */
 	@Test
 	public void testExpandCapacityExplode(){
+		// requiredCapacity hardcode
+		int requiredCapacity = (listWithInt.data.size) * 2 + 1;
 		
+		listWithInt.expandCapacity(requiredCapacity);
+
+		assertEquals("Test expandCapacity for more than double current capacity", requiredCapacity, listWithInt.data.length);
 	}
 
 }
