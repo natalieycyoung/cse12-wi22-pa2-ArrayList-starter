@@ -1,12 +1,21 @@
 /**
- * TODO: Add your file header
- * Name:
- * ID:
- * Email:
- * Sources used: Put "None" if you did not have any external help
- * Some example of sources used would be Tutors, Zybooks, and Lecture Slides
+ * Name: Natalie Young
+ * ID: A17237090
+ * Email: nyoung@ucsd.edu
+ * Sources used: Zybooks, Lecture Slides
  * 
- * 2-4 sentence file description here
+ * Hidden tests on MyArrayList that check the following:
+ * 		Invalid argument
+ * 		Null argument to array constructor
+ * 		Append to list at full capacity
+ * 		Prepend null element to list
+ * 		Insert element at out of bounds index
+ * 		Insert multiple elements sequentially beyond capacity
+ * 		Get when index out of bound
+ * 		Set when index out of bound
+ * 		Remove when index out of bound
+ *		Expand capacity when required is less than current
+ *		Expand capacity when required is more than double of current
  */
 
  //IMPORTANT: Do not change the headers!
@@ -85,12 +94,15 @@ public class MyArrayListHiddenTester {
 		assertEquals("Check that capacity unchanged non-empty list", 6, listWithInt.data.length);
 	}
 	
-	/**
+	/** TODO
 	 * Aims to test the insert method when input index is out of bounds
 	 */
 	@Test
 	public void testInsertOutOfBound(){
-		
+		listWithNull.insert(50, Integer.valueOf(90));
+		listCustomCapacity.insert(12, 6);
+
+		assertEquals("");
 	}
 
 	/**
@@ -134,7 +146,7 @@ public class MyArrayListHiddenTester {
 	 */
 	@Test
 	public void testExpandCapacitySmaller(){
-	   
+		
 	}
 
 	/** TODO
