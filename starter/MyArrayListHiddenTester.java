@@ -64,9 +64,9 @@ public class MyArrayListHiddenTester {
 	 */
 	@Test
 	public void testAppendAtCapacity(){
-		listCustomCapacity.add(8);
-		listCustomCapacity.add(10);
-		listCustomCapacity.add(4);
+		listCustomCapacity.add(0, 8);
+		listCustomCapacity.add(1, 10);
+		listCustomCapacity.add(2, 4);
 		listCustomCapacity.append(3);
 
 		assertEquals("Check that append increments size", 4, listCustomCapacity.size);
@@ -82,12 +82,12 @@ public class MyArrayListHiddenTester {
 	 */
 	@Test
 	public void testPrependNull(){
-		listCustomCapacity.prepend(null);
+		listDefaultCap.prepend(null);
 		listWithInt.prepend(null);
 
-		assertEquals("Check that item prepended empty list", null, listCustomCapacity.data[0]);
-		assertEquals("Check list size after prepend empty list", 1, listCustomCapacity.size);
-		assertEquals("Check that capacity unchanged empty list", 6, listCustomCapacity.data.length);
+		assertEquals("Check that item prepended empty list", null, listDefaultCap.data[0]);
+		assertEquals("Check list size after prepend empty list", 1, listDefaultCap.size);
+		assertEquals("Check that capacity unchanged empty list", 5, listDefaultCap.data.length);
 		
 		assertEquals("Check that item prepended non-empty list", null, listWithInt.data[0]);
 		assertEquals("Check list size after prepend non-empty list", 4, listWithInt.size);
@@ -99,8 +99,8 @@ public class MyArrayListHiddenTester {
 	 */
 	@Test
 	public void testInsertOutOfBound(){
-		listWithNull.insert(50, Integer.valueOf(90));
-		listCustomCapacity.insert(12, 6);
+		listWithNull.insert(50, Integer.valueOf(5));
+		listCustomCapacity.insert(12, 100);
 
 		assertEquals("");
 	}
