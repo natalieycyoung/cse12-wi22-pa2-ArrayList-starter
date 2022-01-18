@@ -99,9 +99,15 @@ public class MyArrayListHiddenTester {
 	 */
 	@Test
 	public void testInsertOutOfBound(){
-		listWithNull.insert(50, Integer.valueOf(5));
-		listCustomCapacity.insert(12, 100);
+		try
+		{
+			listWithNull.insert(50, Integer.valueOf(5));
+			listCustomCapacity.insert(12, 100);
+		}
+		catch (IndexOutOfBoundException e)
+		{
 
+		}
 		assertEquals("Check insert out of bound", );
 	}
 
