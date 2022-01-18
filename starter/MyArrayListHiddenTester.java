@@ -74,10 +74,15 @@ public class MyArrayListHiddenTester {
 	@Test
 	public void testPrependNull(){
 		listCustomCapacity.prepend(null);
+		listWithInt.prepend(null);
 
-		assertEquals("Check that prepend increments size", 4, listCustomCapacity.size);
-		assertEquals("Check that capacity is updated", 6, listCustomCapacity.data.length);
-		assertEquals("Check the correct element", null, listCustomCapacity.data[0]);
+		assertEquals("Check that item prepended empty list", null, listCustomCapacity.data[0]);
+		assertEquals("Check list size after prepend empty list", 1, listCustomCapacity.size);
+		assertEquals("Check that capacity unchanged empty list", 6, listCustomCapacity.data.length);
+		
+		assertEquals("Check that item prepended non-empty list", null, listWithInt.data[0]);
+		assertEquals("Check list size after prepend non-empty list", 4, listWithInt.size);
+		assertEquals("Check that capacity unchanged non-empty list", 6, listWithInt.data.length);
 	}
 	
 	/**
@@ -85,7 +90,7 @@ public class MyArrayListHiddenTester {
 	 */
 	@Test
 	public void testInsertOutOfBound(){
-	   
+		
 	}
 
 	/**
